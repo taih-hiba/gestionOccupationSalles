@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= title %></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.css"/>
+ 
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.js"></script>
+<!-- CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href=../css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/media-queries.css">
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="../ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../ico/apple-touch-icon-57-precomposed.png">
+
+
+
+     <!-- Javascript -->
+
+		<script src="../js/jquery-migrate-3.0.0.min.js"></script>
+		
+		
+        <script src="..js/jquery.backstretch.min.js"></script>
+        <script src="../js/wow.min.js"></script>
+        <script src="../js/jquery.waypoints.min.js"></script>
+        <script src="../js/jquery.mCustomScrollbar.concat.min.js"></script>
+        <script src="../js/scripts.js"></script>
+</head>
+
+<body class="body">
+
+<!-- Wrapper -->
+  <div class="wrapper">
+
+  <!-- Sidebar -->
+  <!-- Sidebar -->
+  <nav class="sidebar">
+				
+    <!-- close sidebar menu -->
+    <div class="dismiss">
+      <i class="fas fa-arrow-left"></i>
+    </div>
+    
+    <div class="logo">
+      <h3><a href="/">Bootstrap 4 Template with Sidebar Menu</a></h3>
+    </div>
+    
+    <ul class="list-unstyled menu-elements">
+      <li>
+        <a href="/"><i class="bi bi-bar-chart-line"></i>Dashboard</a>
+      </li>
+      <li>
+        <a href="/blocs"><i class="bi bi-card-list"></i>Bloc</a>
+      </li>
+      <li>
+        <a href="/salles"><i class="bi bi-card-list"></i>Salles</a>
+        
+      </li>
+      <li>
+        <a href="/creneau"><i class="bi bi-clock"></i>Creneau</a>
+        
+      </li>
+      <li>
+        <a href="/occupation"><i class="bi bi-bookmark-check"></i>Occupation</a>
+        
+    
+      <li>
+  <a href="#otherSections" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" role="button" aria-controls="otherSections">
+          <i class="fas fa-sync"></i>ADD
+  </a>
+    <ul class="collapse list-unstyled" id="otherSections">
+          <li>
+            <a href="/salles/add">ADD SALLES</a>
+            
+          </li>
+          <li>
+            <a href="/blocs/add">ADD BLOCS</a>
+          </li>
+          <li>
+            <a href="/creneau/add">ADD CRENEAU</a>
+          
+          </li>
+        </ul>
+      </li>
+    </ul>
+    
+    
+    
+    <div class="dark-light-buttons">
+      <a class="btn btn-primary btn-customized-4 btn-customized-dark" href="#" role="button">Dark</a>
+      <a class="btn btn-primary btn-customized-4 btn-customized-light" href="#" role="button">Light</a>
+    </div>
+  
+  </nav>
+  <!-- End sidebar -->
+  
+  <!-- Dark overlay -->
+    <div class="overlay"></div>
+
+  <!-- Content -->
+  <div class="content">
+  
+    <!-- open sidebar menu -->
+    <a class="btn btn-primary btn-customized open-menu" href="#" role="button">
+                <i class="fas fa-align-left"></i> <span>Menu</span>
+            </a>
+  
+<div class="container">
+  <h2><%= title %></h2>
+  <style>
+    h2 {text-align: center;}
+   
+    </style>
+  
+  <!--<table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th>salle</th>
+        <th>creneau</th>
+        <th>date</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% salles.forEach(function(e){ %>
+            <tr>
+                <td><%= e.salle.name %></td>
+                <td><%= e.creneau.label %></td>
+                <td><%= e.date %></td>
+                
+                <td>
+                    <a href="occupation/edit/<%= e._id %>" class="btn btn-sm btn-primary">Edit</a>
+                    <a href="occupation/delete/<%= e._id %>" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+        <% }); %>
+    </tbody>
+  </table>-->
+
+<strong id="test" ></strong>
+
+<script>
+
+  function liveData(){
+    const test= document.getElementById('test');
+
+    setInterval(function(){
+     
+     fetch('occupation/all').then(function (response){
+
+      return response.json();
+
+     }).then (function (data) {
+       console.log(data);
+       test.textContent=JSON.stringify(data.length);
+     }).catch(function (error){
+        console.log(error);
+     });
+
+
+
+    },1000);
+  }
+
+  //document.addEventListener('DOMContentLoaded',function(){
+  //  liveData();
+  //});
+  
+</script>
+
+
+</div>
+<div class="content mt-3">
+  <div class="animated fadeIn">
+    <div class="row">
+
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            <strong class="card-title">Occupation List</strong>
+          </div>
+          <div class="card-body">
+  
+        <table id="occupationn"  class="table table-hover" style="width: 100%;">
+      <thead>
+          <tr class="text-uppercase bg-light">
+              <th scope="col" type="hidden">ID</th>
+              <th scope="col">Salle</th>
+              <th scope="col">Creneau</th>
+              <th scope="col">Date</th>
+              <th scope="col">Supprimer</th>
+              
+          </tr>
+      </thead>
+      <tbody id="table-content">
+
+      </tbody>
+  </table>
+</div>
+
+<script>
+$(document).ready(function () {
+    table = $('#occupationn').DataTable({
+        scrollX: true,
+        cache: false,
+//        ajax: "",
+        ajax: {
+            url: "/occupation/all",
+            type: "GET",
+            dataSrc: "",
+            data: {
+
+            }
+        },
+        "columns": [{
+                "data": "_id"
+            },
+          {
+                "data": "salle.name"
+            },
+            {
+                "data": "creneau.label"
+            },
+            {
+                "data": "date"
+            },
+            {
+                "render" : function (){ return '<button type="button" class="btn btn-outline-danger supprimer">Supprimer</button>';}
+            }
+        ]
+    });
+    $(document).on('click', '.supprimer', function () {
+    var id = $(this).closest('tr').find('td').eq(0).text();
+    var oldLing = $(this).closest('tr').clone();
+    var newLigne = '<tr style="position: relative;" class="bg-light" ><th scope="row">' + id + '</th><td colspan="4" style="height: 100%;">';
+    newLigne += '<h4 class="d-inline-flex">Voulez vous vraiment supprimer cette occupation? </h4>';
+    newLigne += '<button type="button" class="btn btn-outline-primary btn-sm confirmer" style="margin-left: 25px;">Oui</button>';
+    newLigne += '<button type="button" class="btn btn-outline-danger btn-sm annuler" style="margin-left: 25px;">Non</button></td></tr>';
+
+    $(this).closest('tr').replaceWith(newLigne);
+    $('.annuler').click(function () {
+        $(this).closest('tr').replaceWith(oldLing);
+    });
+    $('.confirmer').click(function () {
+        $.ajax({
+            url: '/occupation/delete/'+id,
+            data: { },
+            type: 'GET',
+            async: false,
+            success: function (data, textStatus, jqXHR) {
+                if (data.includes("error") == true) {
+                    $("#error").modal();
+                } else {
+                  console.log('dd')
+                    table.ajax.reload();
+                    //remplir(data);
+                    //$("#main-content").load("./pages/Filiere.php");
+
+                }
+            },
+            error: function (jqXHR, textStatus, errorThrown) {
+                $("#error").modal();
+            }
+        });
+    });
+});
+
+
+    // Create WebSocket connection.
+    const socket = new WebSocket('ws://localhost:8080');
+
+    // Listen for messages
+    socket.addEventListener('message', function (event) {
+        table.ajax.reload();
+        console.log('suuuuuuuuuuuuuuuuui');
+    });
+
+  }
+);
+
+</script>
+<script>
+
+
+
+
+
+  
+</script>
+
+
+
+</body>
+</html>
+
+
