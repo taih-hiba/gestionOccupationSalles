@@ -73,7 +73,8 @@ app.use('/creneau',creaneauRouter)
 const occupationRouter = require('./routes/occupation')
 app.use('/occupation',occupationRouter)
 app.use(express.static('public'));
-
+const userRouter = require('./routes/users')
+app.use('/users',userRouter)
 
 const swaggerUi = require("swagger-ui-express"),
 swaggerDocument = require("./swagger.json");
